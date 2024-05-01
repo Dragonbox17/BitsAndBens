@@ -1,4 +1,10 @@
 {
   "item.bitsandbens.raw_platinum": "Raw Platinum",
-  "item.bitsandbens.platinum_ingot": "Platinum Ingot"
+  "item.bitsandbens.platinum_ingot": "Platinum Ingot",
+  "item.bitsandbens.platinum_nugget": "Platinum Nugget",
+
+  "block.bitsandbens.platinum_block": "Block of Platinum",
+  "block.bitsandbens.raw_platinum_block": "Block of Raw Platinum",
+
+  "creativetab.bits_and_bens_tab": "Bits and Bens"
 }

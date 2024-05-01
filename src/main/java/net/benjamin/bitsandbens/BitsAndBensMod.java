@@ -1,6 +1,8 @@
 package net.benjamin.bitsandbens;
 
 import com.mojang.logging.LogUtils;
+import net.benjamin.bitsandbens.block.ModBlocks;
+import net.benjamin.bitsandbens.item.BitsAndBensModTab;
 import net.benjamin.bitsandbens.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -28,7 +30,10 @@ public class BitsAndBensMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        BitsAndBensModTab.register(modEventBus);
+
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -48,10 +53,7 @@ public class BitsAndBensMod
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.RAW_PLATINUM);
-            event.accept(ModItems.PLATINUM_INGOT);
-        }
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

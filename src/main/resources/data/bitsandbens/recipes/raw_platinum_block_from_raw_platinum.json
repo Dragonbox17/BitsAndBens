@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "bitsandbens:raw_platinum"
+    }
+  },
+  "result": {
+    "item": "bitsandbens:raw_platinum_block"
+  }
+}

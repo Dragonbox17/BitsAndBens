@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "bitsandbens:block/platinum_block"
+    }
+  }
+}
