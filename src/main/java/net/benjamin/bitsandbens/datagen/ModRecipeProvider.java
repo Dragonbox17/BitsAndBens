@@ -5,6 +5,7 @@ import net.benjamin.bitsandbens.block.ModBlocks;
 import net.benjamin.bitsandbens.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -41,6 +42,52 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('R', ModItems.RAW_PLATINUM.get())
                 .unlockedBy(getHasName(ModItems.RAW_PLATINUM.get()), has(ModItems.RAW_PLATINUM.get()))
                 .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PLATINUM_PICKAXE.get())
+                .pattern("PPP")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('P', ModItems.PLATINUM_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.PLATINUM_INGOT.get()), has(ModItems.PLATINUM_INGOT.get()))
+                .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PLATINUM_AXE.get())
+                .pattern("PP ")
+                .pattern("PS ")
+                .pattern(" S ")
+                .define('P', ModItems.PLATINUM_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.PLATINUM_INGOT.get()), has(ModItems.PLATINUM_INGOT.get()))
+                .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PLATINUM_SHOVEL.get())
+                .pattern(" P ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('P', ModItems.PLATINUM_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.PLATINUM_INGOT.get()), has(ModItems.PLATINUM_INGOT.get()))
+                .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PLATINUM_SWORD.get())
+                .pattern(" P ")
+                .pattern(" P ")
+                .pattern(" S ")
+                .define('P', ModItems.PLATINUM_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.PLATINUM_INGOT.get()), has(ModItems.PLATINUM_INGOT.get()))
+                .save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PLATINUM_HOE.get())
+                .pattern("PP ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('P', ModItems.PLATINUM_INGOT.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.PLATINUM_INGOT.get()), has(ModItems.PLATINUM_INGOT.get()))
+                .save(pRecipeOutput);
+
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PLATINUM_INGOT.get(), 9)
                 .requires(ModBlocks.PLATINUM_BLOCK.get())

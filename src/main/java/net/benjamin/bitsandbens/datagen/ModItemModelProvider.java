@@ -22,7 +22,17 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.PLATINUM_NUGGET);
         simpleItem(ModItems.PLATINUM_INGOT);
 
-        simpleItem(ModItems.PLATINUM_PICKAXE);
+        handheldItem(ModItems.PLATINUM_PICKAXE);
+        handheldItem(ModItems.PLATINUM_AXE);
+        handheldItem(ModItems.PLATINUM_SHOVEL);
+        handheldItem(ModItems.PLATINUM_SWORD);
+        handheldItem(ModItems.PLATINUM_HOE);
+    }
+
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(BitsAndBensMod.MOD_ID, "item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

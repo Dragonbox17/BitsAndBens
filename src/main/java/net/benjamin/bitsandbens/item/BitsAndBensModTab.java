@@ -24,6 +24,10 @@ public class BitsAndBensModTab {
                 pOutput.accept(ModItems.PLATINUM_NUGGET.get());
 
                 pOutput.accept(ModItems.PLATINUM_PICKAXE.get());
+                pOutput.accept(ModItems.PLATINUM_AXE.get());
+                pOutput.accept(ModItems.PLATINUM_SHOVEL.get());
+                pOutput.accept(ModItems.PLATINUM_SWORD.get());
+                pOutput.accept(ModItems.PLATINUM_HOE.get());
 
                 pOutput.accept(ModBlocks.PLATINUM_BLOCK.get());
                 pOutput.accept(ModBlocks.RAW_PLATINUM_BLOCK.get());
